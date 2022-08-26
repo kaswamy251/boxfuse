@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v1
 
       - name: Deploy to my EC2 instance
-        uses: kaswamy251/boxfuse/.github/workflows/maven.yml@main
+        uses: kaswamy251/boxfuse@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
           SOURCE: "./"

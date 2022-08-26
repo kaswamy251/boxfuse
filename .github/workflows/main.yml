@@ -12,10 +12,10 @@ jobs:
         uses: actions/checkout@v1
 
       - name: Deploy to my EC2 instance
-        uses: easingthemes/ssh-deploy@v2.1.5
+        uses: kaswamy251/boxfuse/.github/workflows/maven.yml@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
           SOURCE: "./"
           REMOTE_HOST: "ec2-54-236-55-32.compute-1.amazonaws.com"
           REMOTE_USER: "ubuntu"
-          TARGET: "/target"
+          TARGET: "/root/target/"

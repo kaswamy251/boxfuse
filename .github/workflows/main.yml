@@ -13,7 +13,6 @@ jobs:
 
       - name: Deploy to my EC2 instance
         uses: nginxunit-examples@main
-
         env:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
           SOURCE: "./"
